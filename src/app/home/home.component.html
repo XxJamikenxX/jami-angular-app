@@ -1,0 +1,52 @@
+<!--The content below is only a placeholder and can be replaced.-->
+<div style="text-align:center">
+    <h1>
+      Welcome to {{ name }}!
+    </h1><h1>
+    I am  {{ age }} years old!
+  </h1>
+    <img width="300" alt="Angular Logo" src={{pic}}>
+  </div>
+  <h2>Here are some cool things about me: </h2>
+  <ul>
+    <li>
+      <h2>I really like<a [routerLink]="[ '/math']"> Math</a>
+      </h2>
+    </li>
+    <li>
+      <h2><a target="_blank" rel="noopener" href="https://www.youtube.com/watch?v=FGf2WJnyfuk">I love Kyrie Irving</a></h2>
+      <h3>How many points will Kyrie Irving score?
+      </h3>
+      <h3>Kyrie Irvng is {{playerAge}} years old.</h3>
+      <div>{{randompoints}}</div>
+      <button (click)="getRandomPoints()">Guess!</button>
+      <div>
+        <video width="320" height="240" controls>
+          <source src="{{kyrievid}}" type="video/mp4">
+          <source src="{{kyrievid}}" type="video/mp4">
+        </video>
+      </div>
+  
+      <div> <p>How old are you?</p>
+        <!-- <input title = "How old are you?" [value]="ageInput"/> -->
+        <input title = "How old are you?" [(ngModel)]="ageInput" type="number"/>
+         <p>{{ageInput}}</p>
+         <button (click)="getAgeDifference()">Get Age Difference!</button>
+         <p>{{ageDifference}}</p>
+         <h3 *ngIf="ageDifference">There are {{ageDifference}} years between you and Kyrie Irving!</h3>
+        </div>
+    
+  
+  
+    </li>
+    <li>
+      <h2><a target="_blank" rel="noopener" href="https://www.youtube.com/watch?v=cAN0ZZnMLe8">I also love Cam Newton</a></h2>
+      <video width="320" height="240" controls>
+        <source src="{{camvid}}" type="video/mp4">
+      </video>
+    </li>
+    <li>
+      <h2><a target="_blank" rel="noopener" href="https://blog.angular.io/">I was born in Dublin, Ireland</a></h2>
+    </li>
+    <img width="300" alt="Angular Logo" src={{img}}>
+  </ul>
