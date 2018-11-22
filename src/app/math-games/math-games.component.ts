@@ -14,6 +14,9 @@ export class MathGamesComponent implements OnInit {
 
   atharvpic = '../assets/images/atharv.jpg';
   jamipic = '../assets/images/jami.jpg';
-  marbleInpt = null;
+  marbleInput = null;
+  fractionGameCorrectAnswer= 18;
+  showAnswerraction = false;
+  checkAnsweFractions = false;
 
 }

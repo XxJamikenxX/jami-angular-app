@@ -15,6 +15,29 @@ Game 1:Fractions
 
 
 <div>
-        <img width="25" alt="Angular Logo" src={{atharvpic}}>Atharv origially had <input title = "How old are you?" [(ngModel)]="ageInput" type="number"/>marbles.
+        <img width="25" alt="Angular Logo" src={{atharvpic}}>Atharv origially had <input title = "How old are you?" [(ngModel)]="marbleInput" type="number"/>marbles.
+        
+        <button (click)="showAnwserFractions=!showAnwserFractions">
+        Show Anwser
+        </button>
+                <p *ngIf="showAnwserFractions">
+    {{fractionGameCorrectAnswer}}
+        </p>
+
+
+        
+</div>
+<div>
+<button (click)="checkAnwserFractions=!checkAnwserFractions">
+        Check Answer
+</button>
+<div *ngIf="checkAnwserFractions">
+<div *ngIf="marbleInput==fractionGameCorrectAnswer">
+        Correct Anwser😄😄
+</div>
+<div *ngIf="marbleInput!=fractionGameCorrectAnswer">
+                Wrong Anwser😢😢
+        </div>
+        </div>
 </div>
 
